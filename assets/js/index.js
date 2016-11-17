@@ -6,7 +6,7 @@ var accessToken = "6127d3da86cf495588b260d10c5855dc",
       recognition, // Used for accessing the HTML5 Speech Recognition API
       messageRecording = " я слушаю...",
       messageCouldntHear = "я не слышу",
-      messageInternalError = "ошибка сервера",
+      messageInternalError = "пока немогу говорить, поговорим позже",
       messageSorry = "даже и сказать нечего";
 
 $(document).ready(function() {
