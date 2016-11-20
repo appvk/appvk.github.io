@@ -92,7 +92,7 @@ function send() {
       "Authorization": "Bearer " + accessToken,
       "ocp-apim-subscription-key": subscriptionKey
     },
-    data: JSON.stringify({q: text, lang: "en"}),
+    data: JSON.stringify({q: text, lang: "en", sessionId: "somerandomthing"}),
     success: function(data) {
       prepareResponse(data);
     },
