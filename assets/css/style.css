@@ -13,12 +13,6 @@ body {
   overflow:hidden;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
 }
-
-
-
-button:active {
-    border-style: inset;
-}
 button:focus {
     outline:0;
 }
