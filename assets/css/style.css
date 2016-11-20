@@ -17,6 +17,12 @@ button:focus {
     outline:0;
 }
 
+#ar{
+    position: absolute;
+    top: 16vh;
+    left: 38vh;
+}
+
 #bu1{
 position: fixed;left: 14vh;
     top: 24vh;
