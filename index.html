@@ -3,9 +3,13 @@
   <title>AppVk</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" /><link rel="stylesheet" href="assets/css/style.css"></head>
 <body oncontextmenu="return false"><div class="container"><div class="header"></div><input id="speech"placeholder="- вопрос  " type="text" onkeypress="document.getElementById('spokenResponse').style.opacity = '1'"><button id="rec" class="btn"><i class="fa fa-microphone"></i></button>
 <div id="spokenResponse" class="spoken-response">
-<div class="spoken-response__text"></div>
+<div id="a" class="spoken-response__text"></div>
   </div>
 </div>
+  <script>function r() {
+    document.getElementById("a").innerHTML = "";
+}</script>
+  
 <!--<div class="debug">
   <div class="debug__btn btn" style="border:0px; border-radius:20px;">
    <i class="fa fa-code" aria-hidden="true"></i>
