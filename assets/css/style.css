@@ -16,7 +16,7 @@ body {
 
 #bu1{
 
-position: fixed;top: -177%;border-radius: 10px;
+position: fixed;top: -177%;border-radius: 10px; background:transparent;
 
 
 }
@@ -24,7 +24,7 @@ position: fixed;top: -177%;border-radius: 10px;
 
 #bu2{
 
-position: fixed;top: -177%;border-radius: 10px;left: 77%;
+position: fixed;top: -177%;border-radius: 10px;left: 77%; background:transparent;
 
 
 }
