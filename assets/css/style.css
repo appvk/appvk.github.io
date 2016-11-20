@@ -15,7 +15,7 @@ body {
 }
 
 #bu1{
-position: fixed;
+position: fixed;left:9vh;
  /* top: -177;*/
   border-radius: 10px; background:#fafbfc;border:0;
    // shadow depth 1
