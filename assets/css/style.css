@@ -18,8 +18,8 @@ button:focus {
 }
 
 #bu1{
-position: fixed;left:9vh;
- /* top: -177;*/
+position: fixed;left: 14vh;
+    top: 24vh;
   border-radius: 10px; background:#fafbfc;border:0;
    // shadow depth 1
     -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12),
