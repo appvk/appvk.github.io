@@ -30,10 +30,10 @@ button:focus {
 #interface {
 position: fixed;
 color:#c8d2de;
-font-size:1.5em;
+font-size:2.5vw;
 }
 #interface:hover{
-color:#c8d2de;
+color:#7584A2;
 }
 
 
