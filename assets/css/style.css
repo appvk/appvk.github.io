@@ -28,7 +28,7 @@ button:focus {
 }
 
 #interface {
-position:absolute;
+position:fixed;
 }
 
 
