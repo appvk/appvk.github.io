@@ -24,10 +24,11 @@ button:focus {
 }
 
 #b{
-position:fixed;
-  left:25vh;
-  top:-10vh;
-  height="70"; width="60";
+    position: fixed;
+    left: 32vh;
+    top: -25vh;
+    height: 25vh;
+    width: 20vh;
 }
 
 
