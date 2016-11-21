@@ -31,6 +31,10 @@ button:focus {
 position: fixed;
 color:#c8d2de;
 font-size:3.5vw;
+background:#c8d2de;
+border-radius: 0vw 0vw 15vw 0;
+padding-right: 2vw;
+padding-bottom: 2vw;
 }
 #interface:hover{
 color:#7584A2;
