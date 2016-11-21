@@ -24,11 +24,9 @@ button:focus {
 }
 
 #b{
-
 position:fixed;
-  
-
-
+  left:23vh;
+  top:-10vh;
 }
 
 
