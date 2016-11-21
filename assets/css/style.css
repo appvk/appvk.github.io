@@ -29,7 +29,11 @@ button:focus {
 
 #interface {
 position: fixed;
-padding: 2vw;
+color:#c8d2de;
+font-size:1.5em;
+}
+#interface:hover{
+color:#c8d2de;
 }
 
 
