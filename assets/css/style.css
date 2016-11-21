@@ -25,8 +25,9 @@ button:focus {
 
 #b{
 position:fixed;
-  left:23vh;
+  left:25vh;
   top:-10vh;
+  height="70"; width="60";
 }
 
 
