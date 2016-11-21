@@ -163,7 +163,7 @@ background:#d1d9e0;
 
 .container {
   position: fixed;
-  top: 50%;
+  top:35%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
 }
