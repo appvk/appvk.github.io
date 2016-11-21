@@ -27,6 +27,11 @@ button:focus {
     outline:0;
 }
 
+#interface {
+position:absolute;
+}
+
+
 #ar{
     position: absolute;
     top: 16vh;
