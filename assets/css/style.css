@@ -23,6 +23,11 @@ button:focus {
     left: 38vh;
 }
 
+#dwnld{
+border:0;
+  
+}
+
 #b{
     position: fixed;
     left: 30vh;
