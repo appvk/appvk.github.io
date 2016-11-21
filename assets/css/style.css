@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+ -webkit-transition: all 2.35s ease-in; 
 }
 
 *, *:before, *:after {
@@ -16,6 +17,7 @@ body {
 
 a {
 color:#7584A2;
+-webkit-transition: all 0.35s ease-in;  
 }
 a:hover {
 color:#fff
