@@ -28,7 +28,8 @@ button:focus {
 }
 
 #interface {
-position:fixed;
+position: fixed;
+padding: 2vw;
 }
 
 
