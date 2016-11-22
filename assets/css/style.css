@@ -34,7 +34,7 @@ button:focus {
     margin: 0!important;
     position: fixed;
     width: 100vw;
-    height: 100vw;
+    height: -55vw;
     top: -20vw;
     left: -25vw;
 
