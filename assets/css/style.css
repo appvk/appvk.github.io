@@ -26,6 +26,20 @@ color:#fff
 button:focus {
     outline:0;
 }
+.asciicast{
+    display: block;
+    float: none;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0;
+    position: fixed;
+    width: 40vw;
+    height: 55vw;
+    top: -20vw;
+    left: 5vw;
+
+}
+
 
 #interface {
 position: fixed;
