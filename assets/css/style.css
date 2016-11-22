@@ -30,8 +30,8 @@ button:focus {
     display: block;
     float: none;
     overflow: hidden;
-    padding: 0px;
-    margin: 0;
+    padding: 0!important;
+    margin: 0!important;
     position: fixed;
     width: 40vw;
     height: 55vw;
