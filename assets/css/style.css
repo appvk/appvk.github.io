@@ -47,7 +47,7 @@ button:focus {
     font-size: 3.5vw;
     background: #edeef0;
     border-radius: 0vw 1vw 1vw 0;
-    padding-right: 2vw;
+    padding-right: 1vw;
     padding-bottom: 0.3vw;
     -webkit-transition: all 0.45s ease-in;
 }
