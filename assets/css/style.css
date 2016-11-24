@@ -43,7 +43,7 @@ button:focus {
 
 #interface {
     position: fixed;
-    color: #edeef0;
+    color: #fff;
     font-size: 3.5vw;
     background: #507299;
     border-radius: 0vw 1vw 1vw 0;
