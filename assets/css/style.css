@@ -45,7 +45,7 @@ button:focus {
     position: fixed;
     color: #c8d2de;
     font-size: 3.5vw;
-    background: #edeef0;
+    background: #507299;
     border-radius: 0vw 1vw 1vw 0;
     padding-right: 1vw;
     padding-bottom: 0.3vw;
@@ -53,6 +53,7 @@ button:focus {
 }
 #interface:hover{
 color:#7584A2;
+background: #edeef0;
 }
 
 
