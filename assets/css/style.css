@@ -41,11 +41,11 @@ button:focus {
 }
 
 #t{
-    position: fixed;
+     position: fixed;
     top: -23vw;
-    left: 6vw;
-  height:25vw;
-  width:100%;
+    left: -3vw;
+    height: 62vw;
+    width: 114%;
 }
 #interface {
     position: fixed;
