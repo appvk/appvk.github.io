@@ -47,7 +47,7 @@ button:focus {
     left: -10vw;
     height: 70vw;
     width: 140%;
-    background: rgb(237, 238, 240);
+    background: linear-gradient(to top, transparent, #edeef0);
   -webkit-transition: all 0.45s ease-in;
 }
 #interface {
