@@ -350,7 +350,7 @@ input:active, input:focus, textarea:active, textarea:focus {
 }
 
 .spoken-response__text {
-  background-color: #fafbfc;
+  background-color: rgba(255, 255, 255, 0.26);
   color: #7584A2;
   padding: 1em;
   border-radius:25px;
