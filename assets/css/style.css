@@ -192,6 +192,7 @@ background:#d1d9e0;
   position: fixed;
   top:35%;
   left: 50%;
+  -webkit-transition: all 0.45s ease-in;
   -webkit-transform: translate(-50%, -50%);
 }
 
@@ -349,6 +350,7 @@ input:active, input:focus, textarea:active, textarea:focus {
   padding:1em;
   position:absolute;
   width: 100%;
+  -webkit-transition: all 1.5s ease-in;
 }
 
 .spoken-response__text {
@@ -358,5 +360,6 @@ input:active, input:focus, textarea:active, textarea:focus {
   border-radius:25px;
   font-weight: 900;
   text-align:center;
+  -webkit-transition: all 2.5s ease-in;
   
 }
