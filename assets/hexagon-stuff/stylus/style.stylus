@@ -1,0 +1,55 @@
+// --- Hexagon Sizing Mixin for div ---
+hex-style(size)  
+    width (10 * size)
+    height (17.32 * size)
+    border-radius size/0.45 * size
+    background-color $background
+    &:before, &:after
+        content ''
+        position absolute
+        width (10 * size)
+        height (17.32 * size)
+        border-radius size/0.45 * size
+        background-color $background
+        transition 0.35s cubic-bezier(0.75, 0, 0.2, 1)
+    &:before { transform: rotate(60deg); }
+    &:after  { transform: rotate(-60deg); }
+
+// --- PAGE STYLINGS ---
+* {transition: 0.35s cubic-bezier(0.75, 0, 0.2, 1)}
+body {overflow-x: hidden;}
+
+// --- Hexagon Background ---
+$background = #a3b9da;
+$background2 = #c0d2b6;
+
+.hex
+    position absolute
+    transform translate(-50%, -50%) rotate(-45deg)
+    transition width 0.35s cubic-bezier(0.75, 0, 0.2, 1), height 0.35s cubic-bezier(0.75, 0, 0.2, 1), border-radius 0.35s cubic-bezier(0.75, 0, 0.2, 1), background 0.35s cubic-bezier(0.75, 0, 0.2, 1), top 0s ease, left 0s ease
+
+.hex1
+    hex-style(16px)
+    top 51.5%
+    left 54%
+    opacity 0.9
+    
+.hex2
+    height 240px
+    width 240px
+    top 48.5%
+    left 46%
+    opacity 0.7
+            
+.target
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    padding 30px
+    
+@media screen and (max-width:540px)
+    .hex1 {height: 173px; width: 100px; background-color: $background2;}
+    .hex1:before, .hex1:after {height: 173px; width: 100px; background-color: $background2;}
+    .hex2 {height: 150px; width: 150px;}

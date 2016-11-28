@@ -1,0 +1,68 @@
+* {
+  transition: 0.35s cubic-bezier(0.75, 0, 0.2, 1);
+}
+body {
+  overflow-x: hidden;
+}
+.hex {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: width 0.35s cubic-bezier(0.75, 0, 0.2, 1), height 0.35s cubic-bezier(0.75, 0, 0.2, 1), border-radius 0.35s cubic-bezier(0.75, 0, 0.2, 1), background 0.35s cubic-bezier(0.75, 0, 0.2, 1), top 0s ease, left 0s ease;
+}
+.hex1 {
+  width: 160px;
+  height: 277.12px;
+  border-radius: 16px/7.2px;
+  background-color: #a3b9da;
+  top: 51.5%;
+  left: 54%;
+  opacity: 0.9;
+}
+.hex1:before,
+.hex1:after {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 277.12px;
+  border-radius: 16px/7.2px;
+  background-color: #a3b9da;
+  transition: 0.35s cubic-bezier(0.75, 0, 0.2, 1);
+}
+.hex1:before {
+  transform: rotate(60deg);
+}
+.hex1:after {
+  transform: rotate(-60deg);
+}
+.hex2 {
+  height: 240px;
+  width: 240px;
+  top: 48.5%;
+  left: 46%;
+  opacity: 0.7;
+}
+.target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+}
+@media screen and (max-width: 540px) {
+  .hex1 {
+    height: 173px;
+    width: 100px;
+    background-color: #c0d2b6;
+  }
+  .hex1:before,
+  .hex1:after {
+    height: 173px;
+    width: 100px;
+    background-color: #c0d2b6;
+  }
+  .hex2 {
+    height: 150px;
+    width: 150px;
+  }
+}
