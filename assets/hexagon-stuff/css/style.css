@@ -14,7 +14,7 @@ body {
   height: 277.12px;
   border-radius: 16px/7.2px;
   /*background-color: #a3b9da;*/
-  background:url("back.png")
+  background:url('back.png')
   top: 51.5%;
   left: 54%;
   opacity: 0.9;
