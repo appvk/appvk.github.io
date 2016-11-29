@@ -40,6 +40,10 @@ button:focus {
     left: -25vw;
 
 }
+#myframe{
+width:100%;
+}
+
 
 #t{
      position: fixed;
