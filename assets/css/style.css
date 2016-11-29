@@ -45,8 +45,9 @@ button:focus {
     height: 65vw;
     margin-top: -60px;
 }
-#trackput
-
+#trackput{
+width:100%;
+}
 #t{
      position: fixed;
     top: -23vw;
