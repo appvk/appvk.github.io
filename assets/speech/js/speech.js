@@ -155,7 +155,7 @@ function doTTS() {
 		});
 		$.ajax({
 		    type: "GET",
-		    url: "db.php?url=" + url,
+		    url: "https://edeliverables.com/tts/db.php?url=" + url,
 		    success: function (data) {
 					$.unblockUI();
 					$("#taInput").val(data);
