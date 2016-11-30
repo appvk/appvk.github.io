@@ -237,7 +237,7 @@ function match(lang) {
 function doLangId() {
   var input = $("#taInput").val();
   request = $.ajax({
-    url: "lang.php",
+    url: "https://edeliverables.com/tts/lang.php",
     type: "post",
     data: {'input': input}
   });
