@@ -1,0 +1,61 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><title>/</title>
+<!--<link rel="icon" type="image/vnd.microsoft.icon" href="https://webasr.yandex.net/favicon.ico">-->
+<script type="text/javascript" src="js/webspeechkit-settings.js"></script><script src="js/webspeechkit.js"></script>
+<link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css"/>
+<style>
+    textarea{
+font-weight:900;max-width:40vw;max-height:20vw;border-radius: 1.3125em;outline: 0;
+box-shadow: inset 0 1px 3px rgba(0,0,0,.2);position: absolute;left: 85px;top: 10px;
+background: #fafbfc;
+}
+     textarea:focus{
+box-shadow:0 0 12px #38c; 
+    }
+textarea::-webkit-scrollbar-thumb {
+  background: #000; 
+}
+    #debug:hover{
+box-shadow:0 0 12px #38c;    
+    }
+    #debug{
+    position: absolute;height: 20px;left: 16px;font-weight: 900;background: #fafbfc;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+    font-size: 14px;
+    border-radius: 0.5vw;
+    padding: 7px;
+    min-width: 37px;
+    top: 10px;
+    }
+    
+    
+</style>
+</head>
+<body style="overflow:hidden;margin:0;background-color: #edeef0;">
+<div id="debug"  style="">
+<!--отпр пак:--><span  style="
+    visibility: hidden;
+    position: absolute;
+" id="package_send"></span>
+<!--прин пак:--><span style="
+    visibility: hidden;
+    position: absolute;
+" id="package_proc"></span>
+<span id="process_delay"></span><br>
+</div>
+<div align="center" style="text-align:center;vertical-align: center;">
+<!--<a href="https://www.yandex.ru/"><img src="https://yastatic.net/www/2.34/yaru/i/logo.png" title="" alt="Яндекс" width="100" height="44" style=""></a>-->
+<!--<a href="https://api.yandex.ru/speechkit/"></a>--><img style="
+        position: absolute;
+    top: 66px;
+    left: 26px;" src="img/mic.svg" width="3.5%">
+<div style="text-align: center; width: 100%; padding: 5pt">
+<div style="float: left; width: 25%; height: 500pt;"></div>
+<div style="text-align: left; width: 75%; height 44pt; border: 0px solid gray"><span style="padding: 2pt; color:gray" id="sendVsProc">..</span>
+    <center><textarea id="content"style="font-weight:900;width:40vw;height:20vw;border-radius: 0.3125em;border: 0;"> </textarea></center>
+</div></div>
+<script src="js/test.js"></script>
+<!--<script>
+var _0x1143=["\x61\x70\x69\x6B\x65\x79","\x73\x65\x74\x74\x69\x6E\x67\x73","\x73\x70\x65\x65\x63\x68\x6B\x69\x74","\x30\x36\x39\x62\x36\x36\x35\x39\x2D\x39\x38\x34\x62\x2D\x34\x63\x35\x66\x2D\x38\x38\x30\x65\x2D\x61\x61\x65\x64\x63\x66\x64\x38\x34\x31\x30\x32"];ya[_0x1143[2]][_0x1143[1]][_0x1143[0]]= _0x1143[3];
+</script>--><script>
+ya.speechkit.settings.apikey = '53728541-51f3-4802-a7f5-1687c4f597f1';
+</script></div></body></html>
