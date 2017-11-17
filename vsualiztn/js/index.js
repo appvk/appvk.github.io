@@ -19,7 +19,7 @@
 
   SMOOTHING = 0.5;
 
-  MP3_PATH = 'https://api.soundcloud.com/tracks/235782716/stream?client_id=b1495e39071bd7081a74093816f77ddb';
+  MP3_PATH = 'https://api.soundcloud.com/tracks/204921857/stream?client_id=b1495e39071bd7081a74093816f77ddb';
 
   SCALE = {
     MIN: 5.0,
