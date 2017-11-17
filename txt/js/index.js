@@ -164,7 +164,7 @@ var Letter = (_temp = _class = function (_React$Component) {
           height: this.props.fontHeight,
           width: this.props.fontHeight / 2,
           left: this.props.x,
-          top: 250,
+          top: 25,
           transition: '\n            top 1s ' + easingFunction + ' ' + transitionDelay + 's,\n            left 1s ' + easingFunction + ' ' + transitionDelay + 's,\n            font-size 1s ' + easingFunction + ' ' + transitionDelay + 's\n          ',
           animation: this.state.animate ? '\n              ' + ('fade-' + this.state.fade + '-' + keyframe) + '\n              ' + easingFunction + '\n              ' + this.props.animationSpeed + 'ms forwards\n            ' : null
         }
