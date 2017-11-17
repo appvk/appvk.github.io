@@ -30,7 +30,7 @@ function _inherits(subClass, superClass) {
   if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-var text = '\nС чего снимаем показатели\n?' ; var text = '\nВывести графики\n?';
+var text = '\n\n?' ;
 
 // Cycle animation
 var fadeInOut = true;
@@ -164,7 +164,7 @@ var Letter = (_temp = _class = function (_React$Component) {
           height: this.props.fontHeight,
           width: this.props.fontHeight / 2,
           left: this.props.x,
-          top: this.props.y,
+          top: 250,
           transition: '\n            top 1s ' + easingFunction + ' ' + transitionDelay + 's,\n            left 1s ' + easingFunction + ' ' + transitionDelay + 's,\n            font-size 1s ' + easingFunction + ' ' + transitionDelay + 's\n          ',
           animation: this.state.animate ? '\n              ' + ('fade-' + this.state.fade + '-' + keyframe) + '\n              ' + easingFunction + '\n              ' + this.props.animationSpeed + 'ms forwards\n            ' : null
         }
