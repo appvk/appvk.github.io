@@ -1,5 +1,4 @@
 'use strict';
-
 var _class, _temp, _class2, _temp2;
 
 function _classCallCheck(instance, Constructor) {
