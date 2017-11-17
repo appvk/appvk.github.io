@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Tone Generator</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <link href='//fonts.googleapis.com/css?family=Lato:900,400' rel='stylesheet' type='text/css'>
+
+<div class="svgSpriteWrapper hidden">
+    <!--?xml version="1.0" encoding="utf-8"?-->
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol viewBox="0 0 321 176.5" id="wave_sawtooth"><path d="M8 176c-1.4 0-2.9-.4-4.1-1.2-2.4-1.4-3.9-4-3.9-6.8V88.5c0-4.4 3.6-8 8-8s8 3.6 8 8v66.3l140.9-73.9L309.3.9c2.5-1.3 5.5-1.2 7.9.2 2.4 1.4 3.9 4 3.9 6.8v80.5c0 4.4-3.6 8-8 8s-8-3.6-8-8V21.2L164.3 95.1l-152.6 80c-1.1.6-2.4.9-3.7.9z"></path></symbol>
+        <symbol viewBox="0 0 321 176.5" id="wave_sine"><path d="M84.2 176c-26.1 0-49-15.2-66.2-43.9C5.6 111.3.4 90.8.2 89.9c-1.1-4.3 1.6-8.6 5.9-9.7 4.3-1.1 8.6 1.6 9.7 5.9.2 1 18.9 73.9 68.4 73.9 46.6 0 59.6-37.5 68.2-72.7l.3-1.2c2.9-12 8.4-34.3 20.8-52.6 15-22.2 36.2-33.5 63-33.5 25.2 0 47.9 15.2 65.4 43.8 12.7 20.7 18.3 41.2 18.5 42.1 1.2 4.3-1.4 8.7-5.6 9.8-4.3 1.2-8.7-1.4-9.8-5.6-.2-.7-20.7-74.1-68.5-74.1-21.5 0-37.8 8.6-49.8 26.4-10.8 16-15.6 35.7-18.5 47.5l-.3 1.2c-6.7 27.6-20.7 84.9-83.7 84.9z"></path></symbol>
+        <symbol viewBox="0 0 321 176.5" id="wave_square"><path d="M160.4 176.5H8c-4.4 0-8-3.6-8-8v-80c0-4.4 3.6-8 8-8s8 3.6 8 8v72h136.4l.1-72-.1-79.9c0-2.1.8-4.2 2.3-5.7 1.5-1.5 3.5-2.3 5.7-2.3H313c4.4 0 8 3.6 8 8v80c0 4.4-3.6 8-8 8s-8-3.6-8-8v-72H168.4l.1 72-.1 80.1c0 4.2-3.6 7.8-8 7.8z"></path></symbol>
+        <symbol viewBox="0 0 321 176.5" id="wave_triangle"><path d="M84.2 176.5c-2.2 0-4.3-1.1-5.8-2.7L2.2 93.6c-3-3.2-2.9-8.3.3-11.4 3.2-3 8.3-3 11.3.2l70.4 73.9 70.5-73.9 76.1-79.7c1.5-1.6 3.6-2.2 5.8-2.2 2.2 0 4.3.6 5.8 2.2l76.2 79.9c3 3.2 2.9 8.2-.3 11.2-3.2 3-8.3 2.9-11.3-.3l-70.4-73.9-70.3 73.9L90 173.8c-1.5 1.6-3.6 2.7-5.8 2.7z"></path></symbol>
+    </svg>
+</div>
+
+<div class="mainWrapper deviceBody clearfix">
+    
+    <div class="sidebar">
+        <form id="waveTypeForm" name="waveTypeForm" class="waveTypeWrapper clearfix">
+            <div class="waveTypeTitle">
+                <span class="waveTypeTitleLabel">select</span>
+                <span class="waveTypeTitleValue">Wave Type</span>
+            </div>
+            <div class="clearfix">
+                <div class="radioGroup">
+                    <input type="radio" class="filterCheckbox" value="1" id="waveSelector_sine" name="waveSelector"/>
+                    <label for="waveSelector_sine" class="symLabel">
+                        <h4 class="visuallyhidden">Sine</h4>
+                        <svg class="selectedIcon">
+                            <use xlink:href="#wave_sine" />
+                        </svg>
+                    </label>
+                </div>
+                <div class="radioGroup">
+                    <input type="radio" class="filterCheckbox" value="2" id="waveSelector_square" name="waveSelector"/>
+                    <label for="waveSelector_square" class="symLabel">
+                        <h4 class="visuallyhidden">Square</h4>
+                        <svg class="selectedIcon">
+                            <use xlink:href="#wave_square" />
+                        </svg>
+                    </label>
+                </div>
+                <div class="radioGroup">
+                    <input type="radio" class="filterCheckbox" value="3" id="waveSelector_triangle" name="waveSelector" checked/>
+                    <label for="waveSelector_triangle" class="symLabel">
+                        <h4 class="visuallyhidden">Triangle</h4>
+                        <svg class="selectedIcon">
+                            <use xlink:href="#wave_triangle" />
+                        </svg>
+                    </label>
+                </div>
+                <div class="radioGroup">
+                    <input type="radio" class="filterCheckbox" value="4" id="waveSelector_sawtooth" name="waveSelector"/>
+                    <label for="waveSelector_sawtooth" class="symLabel">
+                        <h4 class="visuallyhidden">Sawtooth</h4>
+                        <svg class="selectedIcon">
+                            <use xlink:href="#wave_sawtooth" />
+                        </svg>
+                    </label>
+                </div>
+            </div>
+        </form>
+
+        <div class="noteWrapper">
+            <p>Click on the screen to generate a tone. Vertical position controls the volume, horizontal position controls the pitch.</p>
+        </div>
+    </div>
+    
+    <div class="controlPadBase">
+        <div class="screw screw_1"><span class="screwInner"></screw></div>
+        <div class="screw screw_2"><span class="screwInner"></screw></div>
+        <div class="screw screw_3"><span class="screwInner"></screw></div>
+        <div class="screw screw_4"><span class="screwInner"></screw></div>
+        <div class="controlPadOuter">
+            <div class="controlPadWrapper">
+                <div id="controlPad" class="controlPad">
+                    <span class="controlPadLabel controlPadLabel_top">- pitch +</span>
+                    <span class="controlPadLabel controlPadLabel_right">- vol +</span>
+                    <span class="controlPadLabel controlPadLabel_bottom">- pitch +</span>
+                    <span class="controlPadLabel controlPadLabel_left">- vol +</span>
+                    <svg id="padGrid" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 401 321.5"><path class="hst0" d="M200.5.2v321M240.5.2v321M160.5.2v321M320.5.2v321M360.5.2v321M280.5.2v321M80.5.2v321M120.5.2v321M40.5.2v321M400.5.2v321M200.5.2v321M.5 161h400M.5 121h400M.5 201h400M.5 40.5h400M.5.5h400M.5 80.5h400M.5 281h400M.5 241h400M.5 321h400M196 160.8h9M196 120.8h9M196 200.8h9M196 80.8h9M196 40.8h9M196 .8h9M196 240.8h9M196 280.8h9M196 320.8h9M196 140.8h9M196 100.8h9M196 180.8h9M196 60.8h9M196 20.8h9M196 220.8h9M196 260.8h9M196 300.8h9M196 150.8h9M196 110.8h9M196 190.8h9M196 70.8h9M196 30.8h9M196 230.8h9M196 270.8h9M196 310.8h9M196 130.8h9M196 90.8h9M196 170.8h9M196 50.8h9M196 10.8h9M196 210.8h9M196 250.8h9M196 290.8h9M200.5 156.3v8.9M240.5 156.3v8.9M160.5 156.3v8.9M280.5 156.3v8.9M320.5 156.3v8.9M360.5 156.3v8.9M120.5 156.3v8.9M80.5 156.3v8.9M40.5 156.3v8.9M220.5 156.3v8.9M260.5 156.3v8.9M180.5 156.3v8.9M300.5 156.3v8.9M340.5 156.3v8.9M140.5 156.3v8.9M100.5 156.3v8.9M60.5 156.3v8.9M210.5 156.3v8.9M250.5 156.3v8.9M170.5 156.3v8.9M290.5 156.3v8.9M330.5 156.3v8.9M130.5 156.3v8.9M90.5 156.3v8.9M50.5 156.3v8.9M230.5 156.3v8.9M270.5 156.3v8.9M190.5 156.3v8.9M310.5 156.3v8.9M350.5 156.3v8.9M150.5 156.3v8.9M110.5 156.3v8.9M70.5 156.3v8.9M380.5 156.3v8.9M370.5 156.3v8.9M390.5 156.3v8.9M20.5 156.3v8.9M.5 170.5V151M30.5 156.3v8.9M.5 130.5V111M.5 210.5V191M.5 250.5V231M.5 290.5V271M.5 90.5V71M.5 50.5V31M.5 10.5V.5M.5 321v-9.8"/></svg>
+                    <div id="controlPadMarker" class="controlPadMarker"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>

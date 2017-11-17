@@ -1,0 +1,522 @@
+// Basic Styles
+
+$black: #4d4d4d;
+$white: #ffffff;
+$cream: #efeeeb;
+$grey: #dad8d2;
+$primary: #00b7c6;
+$font:'Lato, sans-serif';
+$display:$font;
+$text:$font;
+
+html {
+    box-sizing: border-box;
+    font-family: $font;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+    color: $black;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6em;
+}
+
+.wrapper {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 100%;
+}
+
+// Hide only visually, but have it available for screenreaders
+.visuallyhidden {
+  border:0;
+  clip:rect(0 0 0 0);
+  height:1px;
+  margin:-1px;
+  overflow:hidden;
+  padding:0;
+  position:absolute;
+  width:1px;
+}
+
+// Clearfix
+// ['@extend'-able version for dealing with pre-generated markup]
+%cf:before,
+%cf:after{
+  content:' ';
+  display:table;
+}
+%cf:after{clear:both;}
+// For IE 6/7 only – Include this rule to trigger hasLayout and contain floats.
+%cf{zoom:1;}
+
+.clearfix{
+  @extend %cf;
+}
+
+h1,h2,h3,h4{
+    display:inline-block;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    font-weight:900;
+}
+h1{
+    font-size:1.2em;
+}
+
+a{
+    text-decoration:none;
+    color:$primary;
+    transition:color .2s;
+    &:hover{
+        color:$black;
+    }
+}
+
+.svgSpriteWrapper{
+    display:none;
+}
+
+/**
+ * ---------------
+ * PROJECT COLOURS
+ * ---------------
+ */
+$body:#9da591;
+$bodyLight:#c2d1c4;
+$bodyBorder:#afb6b4;
+
+$textRed:#673639;
+$textBg:#5b5a50;
+
+$controlPad_dark:#21a3ae;
+$controlPad_light:#21b7b6;
+$marker:#45ffdf;
+$controlPadWrapper_light:#6b6d62;
+$controlPadWrapper_dark:#5c5e53;
+
+$controlPadWrapper_dark:#434739;
+
+$screw_light:#636968;
+$screw_dark:#2b2a28;
+$screwBlack:#272a27;
+$grid:#0c8886;
+
+$button_top:#5d6545;
+$button_bottom:#66685b;
+$button_highlight:#6f765a;
+
+body{
+    background:black;
+}
+
+/**
+ * -----------
+ * DEVICE BODY
+ * -----------
+ */
+.deviceBody{
+    margin:2em auto;
+    width:44em;
+    background:$body;
+    background-image:linear-gradient($bodyLight,$body);
+    border:.4em solid $bodyBorder;
+    border-radius:.5em;
+    box-shadow:
+        lighten($bodyBorder,20%) 0 -.1em 0 0,
+        lighten($bodyBorder,20%) 0 -.1em 0 0,
+        inset lighten($bodyBorder,20%) 0 -.1em 0 0,
+        inset black 0 0 0 .2em,
+        inset rgba(black,.2) -.5em .8em .2em 0;
+}
+
+/**
+ * --------------
+ * WAVE SELECTION
+ * --------------
+ */
+.radioGroup label{
+    display:block;
+    background:green;
+    border-top:.1rem solid lighten($button_bottom,10%);
+    background-image:linear-gradient($button_top,$button_bottom 10%);
+    border-bottom:.4em solid darken($button_bottom,10%);
+    cursor:pointer;
+    width:4em;
+    position:relative;
+    top:0;
+    margin:1em;
+    margin-bottom:1em;
+    box-shadow:
+        black -.1em .1em 0 0em,
+        black .1em .1em 0 0em,
+        darken($body,10%) -.0em .2em .1em 0,
+        darken($body,10%) -.1em .3em .1em 0,
+        darken($body,10%) -.2em .4em .1em 0,
+        darken($body,10%) -.3em .5em .1em 0,
+        darken($body,10%) -.4em .6em .1em 0;
+}
+
+.radioGroup label .selectedIcon{
+    display:block;
+    margin:0 auto;
+    width:2em;
+    height:2em;
+    fill:$black;
+    transition:fill, .2s;
+}
+
+.radioGroup{
+    input[type="radio"]{
+        display:none;
+    }
+    input[type="radio"]:checked + label{
+        top:.3em;
+        border-bottom-width:.1em;
+        box-shadow:
+            black -.1em .1em 0 0em,
+            black .1em .1em 0 0em,
+            black -.1em -.1em 0 0em,
+            black .1em -.1em 0 0em,
+            darken($body,10%) -.0em .2em .1em 0,
+            darken($body,10%) -.1em .3em .1em 0,
+            darken($body,10%) -.2em .4em .1em 0;
+        margin-bottom:1.3em;
+        .selectedIcon{
+            fill:$body;
+        }
+    }
+}
+
+.waveTypeTitle{
+    text-transform:uppercase;
+    line-height:1;
+    text-align:center;
+    letter-spacing:.1em;
+}
+
+.waveTypeTitleLabel{
+    display:block;
+    color:$textRed;
+    margin-bottom:.1em;
+    font-size:.6em;
+    font-weight:bold;
+}
+.waveTypeTitleValue{
+    display:inline-block;
+    background:$textBg;
+    color:$body;
+    padding:.25em .5em;
+    border-radius:.5em;
+    font-size:.6em;
+}
+
+.sidebar{
+    width:7.1em;
+    float:left;
+    margin:1em;
+}
+
+.waveTypeWrapper{
+    text-align:center;
+    border:.2rem solid $black;
+    padding:.5em;
+    border-radius:.5em;
+}
+
+.noteWrapper{
+    background:$cream;
+    background:linear-gradient(darken($cream,5%), $cream);
+    padding:1em .5em;
+    font-size:.7em;
+    line-height:1.4;
+    margin-top:2em;
+    text-align:left;
+    transform:rotate(-3deg);
+    box-shadow:rgba($black,.4) -.1em .1em .1em 0;
+    // font-family:cursive;
+    color:maroon;
+}
+
+/**
+ * ----------------
+ * CONTROL PAD BODY
+ * ----------------
+ */
+.controlPadBase{
+    width:30em;
+    float:left;
+    margin:1em;
+    background:$controlPadWrapper_light;
+    background-image:linear-gradient($controlPadWrapper_light,#434739);
+    border-top:lighten($controlPadWrapper_light,10%) solid .1em;
+    padding:2em;
+    border-radius:.5em;
+    position:relative;
+    box-shadow:rgba(black,.4) -.1em .2em .1em 0;
+}
+.screw{
+    position:absolute;
+    width:2em;
+    height:2em;
+    &.screw_1{
+        top:0;
+        left:0;
+        border-right:darken($controlPadWrapper_light,10%) solid .1em;
+        border-bottom:lighten($controlPadWrapper_light,10%) solid .1em;
+        border-radius:0 0 .5em 0;
+    }
+    &.screw_2{
+        top:0;
+        right:0;
+        border-left:lighten($controlPadWrapper_light,10%) solid .1em;
+        border-bottom:lighten($controlPadWrapper_light,10%) solid .1em;
+        border-radius:0 0 0 .5em;
+    }
+    &.screw_3{
+        bottom:0;
+        right:0;
+        border-top:darken(#434739,10%) solid .1em;
+        border-left:lighten(#434739,10%) solid .1em;
+        border-radius:.5em 0 0 0;
+    }
+    &.screw_4{
+        bottom:0;
+        left:0;
+        border-top:darken(#434739,10%) solid .1em;
+        border-right:darken(#434739,10%) solid .1em;
+        border-radius:0 .5em 0 0;
+    }
+}
+.screwInner{
+    display:block;
+    width:1.5em;
+    height:1.5em;
+    background:red;
+    margin:.25em;
+    border-radius:50%;
+    background:$screw_light;
+    background-image:linear-gradient($screw_light,lighten($screw_dark,10%));
+    box-shadow:
+        rgba(black,.3) -.1em .2em .2em 0; 
+    border-top:.1em solid rgba(white,.4);
+    position:relative;
+    &:after,
+    &:before{
+        display:block;
+        content:'';
+        width:1.2rem;
+        height:.4rem;
+        background:$screwBlack;
+        position:absolute;
+        top:50%;
+        left:50%;
+        
+        margin-top:-.2rem;
+        margin-left:-.6rem;
+        border-radius:.2rem;
+        transform:rotate(20deg);
+    }
+    &:after{
+        transform:rotate(110deg);
+    }
+    
+}
+.screw_3 .screwInner,
+.screw_4 .screwInner{
+    background-image:linear-gradient(darken($screw_light,10%),darken($screw_dark,10%));
+}
+
+
+.controlPadOuter{
+    background:$controlPadWrapper_light;
+    background-image:linear-gradient($controlPadWrapper_light,$controlPadWrapper_dark);
+    padding:.7em .4em 1.4em;
+    border-radius:.5em;
+    border-top:.1em solid lighten($controlPadWrapper_light,20%);
+    border-bottom:.05em solid darken($controlPadWrapper_dark,10%);
+    box-shadow:rgba(darken($controlPadWrapper_dark,20%),.4) -.5em 1em .2em 0;
+}
+
+.controlPadWrapper{
+    display:block;
+    background:black;
+    border-top:#28332b solid 1em;
+    border-right:#43554e solid 1em;
+    border-bottom:#6c8283 solid 1em;
+    border-left:#262f2f solid 1em;
+    padding:.5em;
+    border-radius:.5em;
+    position:relative;
+    overflow:hidden;
+    &:before{
+        content:'';
+        display:block;
+        top:0;
+        left:0;
+        width:20%;
+        height:100%;
+        background-image:linear-gradient(to right,rgba(white,.2),transparent);
+        position:absolute;
+    }
+    &:after{
+        content:'';
+        display:block;
+        top:-25%;
+        left:70%;
+        width:20%;
+        height:150%;
+        background-image:linear-gradient(to right,rgba(white,.2),transparent);
+        position:absolute;
+        pointer-events:none;
+        transform:rotate(-10deg);
+    }
+}
+
+/**
+ * ------------------
+ * CONTROL PAD SCREEN
+ * ------------------
+ */
+.visualOutputWrapper{
+    margin:2em auto;
+    text-align:center;
+}
+.controlPad{
+    position:relative;
+    background:$black;
+    width:100%;
+    height:20em;
+    cursor:none;
+    overflow:hidden;
+    border-top-left-radius:5em 1em;
+    border-top-right-radius:5em 1em;
+    border-bottom-left-radius:5em 1em;
+    border-bottom-right-radius:5em 1em;
+    background:$controlPad_dark;
+    background-image:linear-gradient(
+        $controlPad_dark,
+        $controlPad_light,
+        $controlPad_dark);
+}
+
+.controlPadLabel{
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:.1em;
+    font-size:.6em;
+    color:darken($grid,5%);
+    display:block;
+    width:10em;
+    text-align:center;
+    position:absolute;
+    line-height:1;
+    pointer-events:none;
+    user-select:none;
+    &.controlPadLabel_top{
+        top:.3em;
+        left:50%;
+        margin-left:-5em;
+    }
+    &.controlPadLabel_bottom{
+        bottom:.3em;
+        left:50%;
+        margin-left:-5em;
+    }
+    &.controlPadLabel_right{
+        top:50%;
+        right:.8em;
+        margin-right:-5em;
+        transform-origin:50% 50%;
+        transform:rotate(-90deg);
+    }
+    &.controlPadLabel_left{
+        top:50%;
+        left:.8em;
+        margin-left:-5em;
+        transform-origin:50% 50%;
+        transform:rotate(-90deg);
+    }
+}
+
+#padGrid{
+    position:absolute;
+    top:5%;
+    left:5%;
+    width:90%;
+    height:90%;
+    stroke:$grid;
+    // background:red;
+    stroke-width:.1rem;
+    pointer-events:none;
+}
+
+/**
+ * ------------------
+ * CONTROL PAD MARKER
+ * ------------------
+ */
+.controlPadMarker{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:1em;
+    height:1em;
+    background:$grey;
+    border-radius:.5em;
+    margin-top:-.5em;
+    margin-left:-.5em;
+    display:none;
+    background:$marker;
+    box-shadow:$marker 0 0 .2em 0em;
+    opacity:.6;
+    &.active{
+        background:$controlPad_dark;
+        z-index:0;
+        background-image:radial-gradient(
+            $white 50%,
+            $marker
+        );
+        &:after,
+        &:before{
+            content:'';
+            display:block;
+            position:absolute;
+            width:100%;
+            height:100%;
+            border-radius:50%;
+            box-shadow:$marker 0 0 .1em .1em;
+            animation: pulse linear infinite 1s;
+        }
+        &:after{
+            animation-delay:.5s;
+        }
+    }
+}
+
+.controlPad:hover .controlPadMarker{
+    display:block;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(.8);
+        opacity:1;
+    }
+    100%{
+        transform:scale(3);
+        opacity:0;
+    }
+}
